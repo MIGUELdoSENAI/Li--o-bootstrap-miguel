@@ -7,11 +7,41 @@
   <title>Bootstrap Arquivos</title>
 
   <!-- 1ª Digitação (Aqui) -->
-
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-dark text-white">
+
+  <div class="container mt-5">
+    <h1 class="mb-4 text-center text-warning"> Bootstrap via Arquivos</h1>
+
+    <div class="d-flex gap-3 justify-content-center mb-4">
+      <button id="btnInfo" class="btn btn-outline-info btn-lg">Info</button>
+      <button id="btnPerigo" class="btn btn-outline-danger btn-lg">Perigo</button>
+      <button id="btnSucesso" class="btn btn-outline-success btn-lg">Sucesso</button>
+    </div>
+
+    <div id="alerta" class="alert d-none text-center fw-bold" role="alert"></div>
+  </div>
 
   <!-- 2ª Digitação (Aqui) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const alerta = document.getElementById('alerta');
+
+    const configs = {
+      btnInfo:    { msg: ' Você clicou em Info!',    cor: 'alert-info'    },
+      btnPerigo:  { msg: ' Cuidado! Botão de perigo!', cor: 'alert-danger'  },
+      btnSucesso: { msg: ' Ação concluída com sucesso!', cor: 'alert-success' },
+    };
+
+    Object.entries(configs).forEach(([id, { msg, cor }]) => {
+      document.getElementById(id).addEventListener('click', () => {
+        alerta.className = `alert text-center fw-bold ${cor}`;
+        alerta.textContent = msg;
+      });
+    });
+  </script>
 
 </body>
 </html>
