@@ -1,1 +1,67 @@
 <!-- 1ª Digitação (Resolver exercício aqui) -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5a: Layout com Grid e Cards</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Nossos Planos</h2>
+            <p class="text-muted">Escolha a melhor opção para o seu negócio.</p>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-12 col-md-4">
+                <div class="card h-100 card-hover shadow-sm border-0">
+                    <div class="card-body d-flex flex-column text-center p-4">
+                        <h4 class="card-title fw-bold text-primary">Básico</h4>
+                        <p class="card-text text-muted mb-4">Ideal para quem está começando agora e precisa do essencial para marcar presença na web.</p>
+                        
+                        <a href="#" class="btn btn-outline-primary mt-auto rounded-pill w-100">Assinar Básico</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 card-hover shadow-sm border-0">
+                    <div class="card-body d-flex flex-column text-center p-4">
+                        <h4 class="card-title fw-bold text-success">Profissional</h4>
+                        <p class="card-text text-muted mb-4">A solução completa com ferramentas avançadas para impulsionar suas vendas e alcance.</p>
+                        
+                        <a href="#" class="btn btn-success mt-auto rounded-pill w-100">Assinar Profissional</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 card-hover shadow-sm border-0">
+                    <div class="card-body d-flex flex-column text-center p-4">
+                        <h4 class="card-title fw-bold text-dark">Enterprise</h4>
+                        <p class="card-text text-muted mb-4">Suporte dedicado 24/7 e recursos ilimitados para grandes empresas e operações complexas.</p>
+                        
+                        <a href="#" class="btn btn-dark mt-auto rounded-pill w-100">Falar com Consultor</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

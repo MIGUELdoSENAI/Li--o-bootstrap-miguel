@@ -1,0 +1,13 @@
+{
+  "name": "ex1b_instalacao_npm",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "vite": "^8.0.1"
+  }
+}
